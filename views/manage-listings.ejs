@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+
+<h2>Manage Listings</h2>
+<div class="listing-grid">
+  <% listings.forEach(listing => { %>
+    <div class="listing-card">
+      <img src="<%= listing.image %>" alt="listing image">
+      <h3><%= listing.price %></h3>
+      <p><%= listing.title %></p>
+      <p><%= listing.location %></p>
+      <p><%= listing.bedrooms %> bedrooms</p>
+
+      <!-- Delete Form Only on This Page -->
+      <form action="/delete-listing" method="POST" onsubmit="return confirm('Delete this listing?')">
+        <input type="hidden" name="id" value="<%= listing._id %>">
+        <button type="submit" class="delete-btn">Delete</button>
+      </form>
+    </div>
+  <% }) %>
+</div>

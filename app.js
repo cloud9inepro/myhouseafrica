@@ -81,7 +81,28 @@ app.post("/add-listing", upload.single("image"), async (req, res) => {
 });
 
 
+app.post("/delete-listing", async (req, res) => {
+    const id = req.body.id;
+  
+    try {
+      await Listing.findByIdAndDelete(id);
+      res.redirect("/listings");
+    } catch (err) {
+      console.error("Error deleting listing:", err);
+      res.status(500).send("Failed to delete listing");
+    }
+  });
+  
 
+
+app.get("/manage-listings", async (req, res) => {
+    try {
+      const listings = await Listing.find({});
+      res.render("manage-listings", { listings });
+    } catch (err) {
+      res.status(500).send("Error loading listings");
+    }
+  });
   
 
 
