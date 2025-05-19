@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+<div class="listing-container">
+<h2 class="list-h2">Available Properties</h2>
+<div class="listing-grid">
+    <% listings.forEach(listing =>{ %>
+        <div class="listing-card">
+            <img src="<%= listing.image %>" alt="listing image">
+            <div class="listing-content">
+              <div class="listing-price">
+                <h3><%= listing.price%></h3>
+            </div>  
+            <div class="listing-title">
+                <p><%=listing.title%></p>
+            </div>
+            <div class="listing-details">
+                <p><%=listing.location%></p>
+              <p><%=listing.type%></p>
+            </div>
+          
+            <button class="view-btn">View Details</button>
+            </div>
+            
+        </div>
+ <%   }) %>
+</div>
+
+</div>
+
+<%- include("footer")-%>

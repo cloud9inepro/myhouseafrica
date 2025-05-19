@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'helvetica neue';
+}
+#header{
+    height: 60px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+.right-group{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 50px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+.nav ul li a:hover{
+    color: #656dd2;
+}
+.nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background:#656dd2 ;
+    transition: width 0.3s;
+}
+.nav ul li a:hover::after, 
+.nav ul li a.active::after{
+    width: 100%;
+}
+.left-group{
+    margin-right: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-1{
+    cursor: pointer;
+    width: 6.25rem;
+    padding: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #5c5cd6;
+    background: white;
+}
+.btn-1:hover{
+    background: #5c5cd6 ;
+    color: white;
+}
+.btn-2{
+    cursor: pointer;
+    width: 6.25rem;
+    padding: 5px 0;
+    border-radius: 8px;
+    border: none;
+    background: #5c5cd6;
+    color: white;
+}
+.btn-2:hover{
+    background: white;
+    color: #5c5cd6;
+    border: 1px solid #5c5cd6;
+}
+
+/*---------------home page------------------*/
+.main{
+    height: 70vh;
+    background: #98999e;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main h1{
+    font-size: 3.125rem;
+    color: white;
+
+}
+.main p{
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*------------------listings------------------*/
+
+
+
+.list-h2{
+    text-align: center;
+}
+
+.listing-container {
+    margin-top: 60px;
+    padding: 20px;
+  }
+  
+  .listing-grid {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+  }
+  
+  .listing-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .listing-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .listing-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .listing-content {
+    padding: 15px;
+  }
+  
+  .listing-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0 5px;
+  }
+  
+  .listing-title {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 5px 0;
+  }
+  
+  .listing-details {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+  }
+  
+  .view-btn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    background-color: #1f5f8b;
+  }
+
+
+
+  @keyframes floatUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .listing-card {
+    opacity: 0;
+    animation: floatUp 0.5s ease-out forwards;
+  }
+  
+  .listing-grid .listing-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .listing-grid .listing-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .listing-grid .listing-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .listing-grid .listing-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .listing-grid .listing-card:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .listing-grid .listing-card:nth-child(6) {
+    animation-delay: 0.4s;
+  }
+  .listing-grid .listing-card:nth-child(7) {
+    animation-delay: 0.4s;
+  }
+  .listing-grid .listing-card:nth-child(8) {
+    animation-delay: 0.4s;
+  }
+  /* add more if you expect more than 4 visible cards */
+  
+
+
+
+
+
+
+
+/*----------------footer-----------------------*/
+
+footer{
+    height: 30vh;
+    background: #1e212a;
+
+}
+.footer-1{
+
+}
+.footer-2{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: white;
+    margin-top: 70px;
+}
+.footer-2 ul{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+.footer-2 ul li a{
+    text-decoration: none;
+    color: black;
+}
+hr{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+
+
+
+
+/*-------------------------------smaller screens---------------------------*/
+
+@media (max-width: 1024px) {
+    .listing-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 on medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .listing-grid {
+      display: flex;
+      flex-wrap: wrap; /* 1 on mobile */
+    }
+  }
